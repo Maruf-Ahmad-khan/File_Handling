@@ -11,6 +11,16 @@ class Binary:
                with open(self.destination_file, 'wb') as wf:
                     wf.write(rf.read())
                     
+                    
+     def Copyer_Files(self):
+          
+          with open(self.source_file, 'rb') as rf:
+               with open(self.destination_file, 'wb') as wf:
+                    wf.write(rf.read())
+                    
 if __name__ == "__main__":
-     file_copier = Binary("Images file/download.png", "Images file/download_copy.png" )
+     file_copier = Binary("Images file/download.png", "Images file/download_copy.png")
      file_copier.Copy_file()
+     ans = Binary( "Images file/office_pic.png", "Images file/office_pic_copy.png" )
+     file_copier.Copyer_Files()
+     
